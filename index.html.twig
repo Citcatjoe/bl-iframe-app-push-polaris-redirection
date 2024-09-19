@@ -1,0 +1,81 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html lang="fr" class="relative overflow-hidden"> 
+	<head>
+		<script src="https://cdn.tailwindcss.com"></script>  
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		{{ block('head_brand') }}   
+		
+	</head>
+	<body class="bg-white"> 
+		
+		<!-- {{ block('loading_overlay') }} -->
+	
+		
+		{# block('header') #} 
+		{{ block('menu_overlay') }}
+		{# <?php include 'hb_header_tp.php'; ?> #} 
+		
+		
+
+		
+		
+		
+
+		{% raw %}  
+		<script id="item-template" type="text/x-handlebars-template">
+			{{#each item}}
+			<li class="mt-10">
+				<img src="" alt="" class="product-img">
+				<div class="product-values">
+					<span>{{name}}</span><br>
+					<span>{{symbol}}, ???</span><br>
+					<span>{{current_price}}</span><br>
+					<span>
+						<img src="img/this/arrow-up.svg" alt="" class="float-left" id="arrow-up">
+						<img src="img/this/arrow-down.svg" alt="" class="float-left" id="arrow-down">
+						<span id="product-24h-value">{{market_cap_change_percentage_24h}}</span>
+					</span><br>
+				</div>
+			</li>
+			{{/each}}
+		</script>
+		{% endraw %}
+
+		
+
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script> -->
+
+		<!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> -->
+
+		<!-- <script src="js/counter-up.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script> -->
+		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+		<!-- <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script> -->
+		
+		<!-- <script src="js/yt.js"></script> -->
+		<script src="js/vendor/modernizr-3.11.2.min.js"></script> 
+		<!-- <script src="js/plugins.js"></script> -->
+		<!-- <script src="js/header.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
+		{# <script src="js/intro.js"></script> #}
+		<!-- <script src="js/headroom.min.js"></script> -->
+		
+
+		<script type="text/javascript" src="https://www.blick.ch/assets/iframeHeightAdjustment.js"></script>
+	</body>
+</html>
